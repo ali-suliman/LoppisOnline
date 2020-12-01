@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <section class="kontakt">
+    <section class="contact">
       <h3>har du några frågor?</h3>
       <p>tveka inte att <a href="#">kontakta oss</a></p>
     </section>
@@ -60,7 +60,7 @@ footer {
     }
   }
 
-  .kontakt {
+  .contact {
     align-items: flex-start;
 
     h3 {
@@ -132,6 +132,34 @@ footer {
         transform: scale(0.9);
         padding: 0rem 0.8rem;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 4rem 8rem;
+
+    .contact {
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 0.95rem;
+        margin: 1rem 0rem;
+
+        a {
+          font-size: 0.95rem;
+          &:hover {
+            color: #fefefe;
+          }
+        }
+      }
+    }
+
+    .links {
+      justify-content: flex-end;
+      align-items: flex-start;
     }
   }
 }
