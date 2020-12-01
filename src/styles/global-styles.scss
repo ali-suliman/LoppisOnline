@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+
+$main-color: #cf5c36;
+$light-shade: #fce5d9;
+
+$title-font: "Montserrat", sans-serif;
+$p-font: "Open Sans", sans-serif;
+
+@mixin flex() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin cta {
+  margin: 0.6rem 0rem;
+  padding: 1.1rem;
+  width: 80%;
+  border: none;
+  border-radius: 2rem;
+  background: #cf5c36;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f2f2f2;
+}
