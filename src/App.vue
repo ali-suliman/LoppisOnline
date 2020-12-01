@@ -11,6 +11,7 @@
   padding: 0rem;
   box-sizing: border-box;
   outline: none;
+  transition: all 0.4s ease;
 }
 #app {
   font-family: $p-font;
@@ -20,6 +21,10 @@
 
 p {
   line-height: 1.7rem;
+}
+
+button {
+  font-family: $p-font;
 }
 
 h1,
