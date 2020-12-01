@@ -14,6 +14,7 @@ export default {}
 
 <style lang="scss" scoped>
 @import "../styles/global-styles.scss";
+
 nav {
   width: 100%;
   min-height: 4rem;
@@ -59,6 +60,11 @@ nav {
     &:hover > .lower {
       transform: translateX(0rem);
     }
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav {
+    display: none;
   }
 }
 </style>
