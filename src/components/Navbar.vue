@@ -64,6 +64,7 @@ nav {
       font-weight: bold;
       color: #444;
       font-size: 0.75rem;
+      text-transform: uppercase;
       cursor: pointer;
       &:hover {
         color: $main-color;
