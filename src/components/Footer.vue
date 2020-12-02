@@ -8,10 +8,10 @@
       <article>
         <p class="list-title">länkar</p>
         <ul>
-          <li><a href="#">huvudsidan</a></li>
+          <li><a>huvudsidan</a></li>
           <li><a>om oss</a></li>
-          <li><a href="#">kontakta oss</a></li>
-          <li><a href="#">ladda ner</a></li>
+          <li><a>kontakta oss</a></li>
+          <li><a>ladda ner</a></li>
         </ul>
       </article>
       <article>
@@ -53,7 +53,7 @@ footer {
     padding: 1rem 2rem;
 
     a {
-      color: #999;
+      color: #777;
       text-decoration: none;
       text-transform: uppercase;
       font-size: 0.7rem;
@@ -64,6 +64,7 @@ footer {
     align-items: flex-start;
 
     h3 {
+      color: #f2f2f2;
       &::first-letter {
         text-transform: uppercase;
       }
@@ -131,14 +132,18 @@ footer {
       img {
         transform: scale(0.9);
         padding: 0rem 0.8rem;
+        cursor: pointer;
       }
     }
   }
 }
 
+//  =========== DISKTOP VIEW ==============  //
+
 @media screen and (min-width: 1200px) {
   footer {
-    padding: 4rem 8rem;
+    padding: 4rem 12rem;
+    justify-content: center;
 
     .contact {
       h3 {
@@ -160,6 +165,52 @@ footer {
     .links {
       justify-content: flex-end;
       align-items: flex-start;
+      transform: translateY(-10rem);
+
+      article {
+        margin-left: 6rem;
+        margin-right: 0rem;
+        .list-title {
+          font-size: 1rem;
+          margin: 0rem 0rem 2rem 0rem;
+        }
+
+        ul {
+          list-style: none;
+
+          li {
+            margin: 1rem 0rem;
+            a {
+              padding: 0.4rem 0rem;
+              font-size: 0.95rem;
+              cursor: pointer;
+
+              &:hover {
+                color: #ccc;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .social-media {
+      margin: -4rem 0rem -1rem 0rem;
+
+      .loppis {
+        font-size: 0.9rem;
+      }
+
+      .socials {
+        img {
+          transform: scale(1.4);
+          margin: 0rem 1rem;
+
+          &:hover {
+            transform: scale(1.8);
+          }
+        }
+      }
     }
   }
 }
