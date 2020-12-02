@@ -1,13 +1,13 @@
 <template>
-  <div class="wrapper">
+  <div class="home">
     <navbar />
     <mobile-navbar />
     <section class="content">
       <article>
         <blockquote>gör din loppis online</blockquote>
         <p>
-          här kan du sälja dina användade saker snabbt och änkelt, genom vår
-          digitala loppismarknad servise.
+          här kan du sälja dina använda saker snabbt och enkelt, genom vår
+          digitala tjänst Loppis Online.
         </p>
       </article>
 
@@ -29,7 +29,7 @@
           <h4>fyll i formularet</h4>
           <p>
             En enkel formular där du beskriver din produkt, lägger till kontakt
-            uppgifter och lite annat
+            uppgifter och lite annan information.
           </p>
         </article>
 
@@ -37,8 +37,8 @@
           <img src="../assets/images/add.svg" alt="" />
           <h4>lägg till produkter</h4>
           <p>
-            En enkel formular där du beskriver din produkt, lägger till kontakt
-            uppgifter och lite annat
+            Fyll på en lista på dem produkterna du vill sälja med bland annat
+            bilder och lite info om produkten.
           </p>
         </article>
 
@@ -46,8 +46,7 @@
           <img src="../assets/images/wait.svg" alt="" />
           <h4>vänta på köpare</h4>
           <p>
-            En enkel formular där du beskriver din produkt, lägger till kontakt
-            uppgifter och lite annat
+            Vänta på att potentiella köpare ska höra av sig.
           </p>
         </article>
       </div>
@@ -81,7 +80,7 @@ export default {
 <style lang="scss" scoped>
 @import "../styles/global-styles.scss";
 
-.wrapper {
+.home {
   @include flex();
   justify-content: center;
 
@@ -98,6 +97,11 @@ export default {
         width: 36ch;
         color: #666;
         align-self: flex-start;
+        font-size: 0.9rem;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
 
       blockquote {
@@ -114,7 +118,7 @@ export default {
 
     img {
       align-self: center;
-      margin: -3rem 0rem;
+      margin: -2rem 0rem;
       transform: scale(0.6);
     }
 
@@ -178,7 +182,7 @@ export default {
 }
 
 @media screen and (min-width: 769px) {
-  .wrapper {
+  .home {
     .content {
       .actions {
         button {
@@ -270,7 +274,7 @@ export default {
 
           img {
             margin: 5rem 0rem;
-            transform: scale(1.1);
+            transform: scale(1);
           }
 
           h4 {
