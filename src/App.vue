@@ -32,5 +32,6 @@ h2,
 h3,
 h4 {
   font-family: $title-font;
+  color: #2f2f2f;
 }
 </style>
