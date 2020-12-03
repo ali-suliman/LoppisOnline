@@ -1,7 +1,13 @@
 <template>
   <div class="about">
-    <mobile-navbar />
-    <Navbar />
+    <!-- NAVIGATION  -->
+
+    <mobile-menu v-if="showMenu" @exitNav="closeNav" />
+    <navbar />
+    <mobile-navbar @menuBtnClicked="showMenuHandler" />
+
+    <!--  -->
+
     <section class="txt">
       <h3><span class="capital">loppis online</span></h3>
       <p>
@@ -53,11 +59,28 @@
 import MobileNavbar from "../components/MobileNavbar.vue"
 import Navbar from "../components/Navbar.vue"
 import Footer from "../components/Footer.vue"
+import MobileMenu from "../components/MobileMenu.vue"
+
 export default {
   components: {
     MobileNavbar,
     Navbar,
     Footer,
+    MobileMenu,
+  },
+  data: () => {
+    return {
+      showMenu: false,
+    }
+  },
+  methods: {
+    showMenuHandler: function() {
+      this.showMenu = true
+    },
+    closeNav: function() {
+      console.log("exiting")
+      this.showMenu = false
+    },
   },
 }
 </script>
@@ -70,7 +93,7 @@ export default {
 
   .txt {
     width: 100%;
-    padding: 10rem 2rem;
+    padding: 10rem 2.5rem;
 
     h3 {
       margin: 1.4rem 0rem;
@@ -96,7 +119,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 700px) {
   .about {
     .txt {
       @include flex();
