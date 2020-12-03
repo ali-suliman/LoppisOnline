@@ -1,7 +1,13 @@
 <template>
   <div class="home">
+    <!-- NAVIGATION  -->
+
+    <mobile-menu v-if="showMenu" @exitNav="closeNav" />
     <navbar />
-    <mobile-navbar />
+    <mobile-navbar @menuBtnClicked="showMenuHandler" />
+
+    <!--  -->
+
     <section class="content">
       <article>
         <blockquote>gör din loppis online</blockquote>
@@ -60,19 +66,31 @@ import MobileNavbar from "../components/MobileNavbar.vue"
 import Footer from "../components/Footer.vue"
 import AnimatedImage from "../components/AnimatedImage.vue"
 import Navbar from "../components/Navbar.vue"
+import MobileMenu from "../components/MobileMenu.vue"
 
 export default {
   name: "Home",
-  data: () => {
-    return {
-      mobile: "",
-    }
-  },
   components: {
     MobileNavbar,
     Footer,
     AnimatedImage,
     Navbar,
+    MobileMenu,
+  },
+
+  data: () => {
+    return {
+      showMenu: false,
+    }
+  },
+  methods: {
+    showMenuHandler: function() {
+      this.showMenu = true
+    },
+    closeNav: function() {
+      console.log("exiting")
+      this.showMenu = false
+    },
   },
 }
 </script>
@@ -92,12 +110,14 @@ export default {
 
     article {
       width: 100%;
+      @include flex();
+      align-items: center;
 
       p {
         width: 36ch;
         color: #666;
-        align-self: flex-start;
         font-size: 0.9rem;
+        text-align: center;
 
         &::first-letter {
           text-transform: uppercase;
@@ -105,7 +125,6 @@ export default {
       }
 
       blockquote {
-        align-self: flex-start;
         color: #222;
         font-size: bold;
         font-family: $title-font;
@@ -147,8 +166,8 @@ export default {
     padding: 8rem 2rem;
 
     .steps-title {
-      align-self: flex-start;
-      width: 20ch;
+      text-align: center;
+      max-width: 20ch;
       line-height: 1.9rem;
       margin: 4rem 0rem;
     }
@@ -181,9 +200,16 @@ export default {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 760px) {
   .home {
     .content {
+      article {
+        margin: 2.5rem 0rem;
+        p,
+        blockquote {
+          align-self: center;
+        }
+      }
       .actions {
         button {
           width: 60%;
@@ -201,8 +227,10 @@ export default {
   }
 }
 
+// ========= DISKTOP VIEW ========= //
+
 @media screen and (min-width: 1200px) {
-  .wrapper {
+  .home {
     .content {
       padding: 3rem 6rem;
       display: grid;
@@ -216,6 +244,7 @@ export default {
         ". . . .  .";
 
       article {
+        display: block;
         grid-area: header;
         blockquote {
           font-size: 3rem;
@@ -227,6 +256,7 @@ export default {
           width: 50ch;
           margin: 1rem 0rem 2rem 0rem;
           line-height: 2.1rem;
+          text-align: left;
         }
       }
 
@@ -262,6 +292,7 @@ export default {
       .steps-title {
         font-size: 1.6rem;
         margin: 5rem 0rem;
+        max-width: 40rem;
       }
 
       .container {
