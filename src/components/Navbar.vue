@@ -10,14 +10,23 @@
     </section>
 
     <section class="rgstr">
-      <button class="signup">skapa konto</button>
-      <button>logga in</button>
+      <button class="signup" @click="signup">skapa konto</button>
+      <button @click="login">logga in</button>
     </section>
   </nav>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    signup: function() {
+      this.$router.push("/signup")
+    },
+    login: function() {
+      this.$router.push("/login")
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
