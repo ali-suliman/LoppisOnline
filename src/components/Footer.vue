@@ -2,7 +2,7 @@
   <footer>
     <section class="contact">
       <h3>har du några frågor?</h3>
-      <p>tveka inte att <a href="#">kontakta oss</a></p>
+      <p>tveka inte att <a>kontakta oss</a></p>
     </section>
     <section class="links">
       <article>
@@ -142,7 +142,7 @@ footer {
 
 @media screen and (min-width: 1200px) {
   footer {
-    padding: 4rem 12rem;
+    padding: 4rem 8rem;
     justify-content: center;
 
     .contact {
@@ -156,20 +156,21 @@ footer {
         a {
           font-size: 0.95rem;
           &:hover {
-            color: #fefefe;
+            color: #f2f2f2;
+            cursor: pointer;
           }
         }
       }
     }
 
     .links {
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-items: flex-start;
-      transform: translateY(-10rem);
+      max-width: 40rem;
+      align-self: flex-start;
 
       article {
-        margin-left: 6rem;
-        margin-right: 0rem;
+        margin: 0rem 4rem 4rem 0rem;
         .list-title {
           font-size: 1rem;
           margin: 0rem 0rem 2rem 0rem;
@@ -195,7 +196,7 @@ footer {
     }
 
     .social-media {
-      margin: -4rem 0rem -1rem 0rem;
+      margin: 2rem 0rem;
 
       .loppis {
         font-size: 0.9rem;
