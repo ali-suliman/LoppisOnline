@@ -2,6 +2,7 @@
 
 $main-color: #cf5c36;
 $light-shade: #fce5d9;
+$links-color: #52b2cf;
 
 $title-font: "Montserrat", sans-serif;
 $p-font: "Open Sans", sans-serif;
@@ -52,4 +53,14 @@ $p-font: "Open Sans", sans-serif;
     transform: translateY(-1rem);
     box-shadow: 0px 10px 20px #0001;
   }
+}
+
+@mixin input-mobile {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 0.3rem 0rem;
+  border: none;
+  border-radius: 2rem;
+  background: #fff5;
+  font-size: 0.8rem;
 }
