@@ -24,17 +24,18 @@
     </section>
     <section class="social-media">
       <p class="loppis">loppisonline.se</p>
-      <article class="socials">
-        <img src="../assets/images/instagram.svg" alt="" />
-        <img src="../assets/images/facebook.svg" alt="" />
-        <img src="../assets/images/twitter.svg" alt="" />
-      </article>
+      <social-links />
     </section>
   </footer>
 </template>
 
 <script>
-export default {}
+import SocialLinks from "../components/SocialLinks.vue"
+export default {
+  components: {
+    SocialLinks,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -127,14 +128,6 @@ footer {
       font-weight: bold;
       font-family: $title-font;
     }
-
-    .socials {
-      img {
-        transform: scale(0.9);
-        padding: 0rem 0.8rem;
-        cursor: pointer;
-      }
-    }
   }
 }
 
@@ -200,17 +193,6 @@ footer {
 
       .loppis {
         font-size: 0.9rem;
-      }
-
-      .socials {
-        img {
-          transform: scale(1.4);
-          margin: 0rem 1rem;
-
-          &:hover {
-            transform: scale(1.8);
-          }
-        }
       }
     }
   }
