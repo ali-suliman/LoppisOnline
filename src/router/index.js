@@ -4,6 +4,8 @@ import Home from "../views/Home.vue"
 import About from "../views/About.vue"
 import Contact from "../views/Contact.vue"
 import Download from "../views/Download.vue"
+import SignUp from "../views/SignUp.vue"
+import LogIn from "../views/LogIn.vue"
 
 Vue.use(VueRouter)
 
@@ -27,6 +29,16 @@ const routes = [
     path: "/download",
     name: "Download",
     component: Download,
+  },
+  {
+    path: "/signup",
+    name: "Sign up",
+    component: SignUp,
+  },
+  {
+    path: "/login",
+    name: "Log in",
+    component: LogIn,
   },
 ]
 
