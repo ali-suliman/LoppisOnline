@@ -1,7 +1,7 @@
 <template>
   <nav>
     <img src="../assets/images/logo.svg" alt="" class="logo" />
-    <div class="menu">
+    <div class="menu" @click="menuBtnHandler">
       <div class="menuBars"></div>
       <div class="menuBars lower"></div>
     </div>
@@ -9,7 +9,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    menuBtnHandler: function() {
+      this.$emit("menuBtnClicked")
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -24,7 +30,7 @@ nav {
   padding: 1.5rem 0rem 1.5rem 2rem;
 
   .logo {
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
 
   .menu {
