@@ -4,13 +4,19 @@
     <form>
       <input type="text" placeholder="Email adress" />
       <input type="text" placeholder="Lösenord" />
-      <button>logga in</button>
+      <button @click="enterSite">logga in</button>
     </form>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    enterSite: function() {
+      this.$router.push("/")
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
