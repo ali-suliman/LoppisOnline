@@ -5,14 +5,14 @@
       <input type="text" v-model="last" placeholder="Efternamn" />
     </section>
     <input type="text" placeholder="Namn" />
-    <input type="email" v-model="email" placeholder="Email adress" />
+    <input type="email" v-model="email" placeholder="Mailadress" />
     <input type="password" v-model="password" placeholder="Lösenord" />
     <input
       type="password"
       v-model="passwordConfermation"
       placeholder="Bekräfta lösenord"
     />
-    <button>registrera mig</button>
+    <button @click="enterSite">registrera mig</button>
   </form>
 </template>
 
@@ -27,6 +27,11 @@ export default {
       password: "",
       passwordConfermation: "",
     }
+  },
+  methods: {
+    enterSite: function() {
+      this.$router.push("/")
+    },
   },
 }
 </script>
