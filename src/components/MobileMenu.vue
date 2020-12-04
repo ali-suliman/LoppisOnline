@@ -7,6 +7,11 @@
       <li><router-link to="/contact">kontakta oss</router-link></li>
       <li><router-link to="/download">ladda ner</router-link></li>
     </ul>
+
+    <section class="actions">
+      <button @click="signup">skapa konto</button>
+      <button @click="login" class="login">logga in</button>
+    </section>
   </div>
 </template>
 
@@ -15,6 +20,12 @@ export default {
   methods: {
     exitNav: function() {
       this.$emit("exitNav")
+    },
+    signup: function() {
+      this.$router.push("/signup")
+    },
+    login: function() {
+      this.$router.push("/login")
     },
   },
 }
@@ -67,6 +78,26 @@ export default {
         width: initial;
         align-self: flex-end;
       }
+    }
+  }
+
+  .actions {
+    width: 100%;
+    margin: 1rem 0rem;
+    margin-top: auto;
+    @include flex();
+    padding: 0rem 2rem;
+
+    button {
+      @include cta-mobile();
+      background: $light-shade;
+      color: $main-color;
+    }
+
+    .login {
+      color: $light-shade;
+      background: none;
+      text-transform: none;
     }
   }
 }
