@@ -1,23 +1,15 @@
 <template>
   <form>
-    <article>
-      <img src="../assets/images/form-name.svg" alt="" /><input
-        type="text"
-        placeholder="Ditt namn"
-      />
-    </article>
-    <article>
-      <img src="../assets/images/form-email.svg" alt="" /><input
-        type="text"
-        placeholder="E-post adress"
-      />
-    </article>
+    <input type="text" placeholder="Ditt namn" />
+
+    <input type="text" placeholder="Mailadress" />
+
     <textarea
       name=""
       id=""
       cols="30"
       rows="10"
-      placeholder="Ditt medelande"
+      placeholder="Medelande"
     ></textarea>
 
     <button class="send">skicka</button>
@@ -51,29 +43,19 @@ form {
   }
 
   textarea {
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 2rem;
+    margin: 0.5rem;
+    font-family: $p-font;
   }
 
-  article {
+  input {
+    margin: 0.5rem 0rem;
+    border-radius: 20px;
     width: 100%;
     background: #fff;
-    overflow: hidden;
-    @include flex();
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 1rem 0rem;
-    border-radius: 20px;
-
-    img {
-      margin-left: 1.5rem;
-      transform: scale(0.86);
-    }
-
-    input {
-      border-radius: 2rem;
-      padding: 1.05rem 1.2rem;
-    }
+    border-radius: 2rem;
+    padding: 1.05rem 2rem;
   }
 
   .send {
@@ -86,21 +68,15 @@ form {
 @media screen and (min-width: 1200px) {
   form {
     padding: 1rem 2rem;
-    article {
-      border-radius: 30rem;
-      margin: 1rem 0rem;
-      input {
-        padding: 1.6rem;
-        font-size: 1rem;
-      }
-      img {
-        transform: scale(1.1);
-        margin-left: 2.5rem;
-      }
+
+    input {
+      padding: 1.6rem 2rem;
+      font-size: 1rem;
+      margin: 0.8rem 0rem;
     }
 
     textarea {
-      font-size: 1.3rem;
+      font-size: 1rem;
       margin: 1rem;
     }
 
