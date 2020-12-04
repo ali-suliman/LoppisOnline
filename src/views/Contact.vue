@@ -159,6 +159,9 @@ export default {
           &:hover {
             transform: translateY(0.4rem);
           }
+          .title {
+            font-size: 0.9rem;
+          }
           img {
             transform: scale(0.9);
           }
