@@ -11,7 +11,7 @@
     <div class="container">
       <section class="content">
         <blockquote>ladd ner <span>loppis online</span>.</blockquote>
-        <p>
+        <p class="txt">
           Här kan du lätt och änkelt sälja dina gamla saker genom att skapa din
           egen loppismarknad online.
         </p>
@@ -180,7 +180,8 @@ export default {
           font-size: 3rem;
         }
 
-        p {
+        .txt {
+          font-size: 1.1rem;
         }
 
         .actions {
@@ -190,9 +191,20 @@ export default {
           flex-direction: row;
           justify-content: space-between;
           max-width: 36rem;
+
           a {
             width: initial;
             padding: 1rem 4rem;
+            cursor: pointer;
+
+            &:hover {
+              background: #f2f2f2;
+              transform: translateY(0.5rem);
+            }
+
+            &:hover > p {
+              color: #222;
+            }
             p {
               color: #f2f2f2;
               font-weight: bold;
