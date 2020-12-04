@@ -39,7 +39,7 @@ export default {
   right: 0;
   width: 100vw;
   height: 100vh;
-  background: $main-color;
+  background: #222;
   z-index: 10;
   @include flex();
   justify-content: flex-start;
@@ -68,6 +68,7 @@ export default {
         text-transform: uppercase;
         text-decoration: none;
         font-weight: bold;
+        font-size: 0.8rem;
 
         &.router-link-exact-active {
           border: 2px solid #f2f2f2;
@@ -77,6 +78,7 @@ export default {
       .exit {
         width: initial;
         align-self: flex-end;
+        font-size: 1.1rem;
       }
     }
   }
@@ -90,12 +92,12 @@ export default {
 
     button {
       @include cta-mobile();
-      background: $light-shade;
-      color: $main-color;
+      background: #f2f2f2;
+      color: #222;
     }
 
     .login {
-      color: $light-shade;
+      color: #f2f2f2;
       background: none;
       text-transform: none;
     }
