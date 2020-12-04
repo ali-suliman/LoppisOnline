@@ -8,10 +8,10 @@
       <article>
         <p class="list-title">länkar</p>
         <ul>
-          <li><a>huvudsidan</a></li>
-          <li><a>om oss</a></li>
-          <li><a>kontakta oss</a></li>
-          <li><a>ladda ner</a></li>
+          <li><a @click="toHome">huvudsidan</a></li>
+          <li><a @click="toAbout">om oss</a></li>
+          <li><a @click="toContact">kontakta oss</a></li>
+          <li><a @click="toDownload">ladda ner</a></li>
         </ul>
       </article>
       <article>
@@ -34,6 +34,20 @@ import SocialLinks from "../components/SocialLinks.vue"
 export default {
   components: {
     SocialLinks,
+  },
+  methods: {
+    toHome: function() {
+      this.$router.push("/")
+    },
+    toAbout: function() {
+      this.$router.push("/about")
+    },
+    toContact: function() {
+      this.$router.push("/contact")
+    },
+    toDownload: function() {
+      this.$router.push("/download")
+    },
   },
 }
 </script>
