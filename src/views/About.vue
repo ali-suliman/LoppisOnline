@@ -108,7 +108,7 @@ export default {
     }
 
     p {
-      color: #888;
+      color: #444;
       max-width: 80ch;
     }
   }
