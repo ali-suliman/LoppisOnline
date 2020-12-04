@@ -26,7 +26,7 @@ export default {}
       margin: 0rem 1rem;
 
       &:hover {
-        transform: scale(1.8);
+        transform: scale(1.6);
       }
     }
   }
