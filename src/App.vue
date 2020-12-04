@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 
 <style lang="scss">
 @import "./styles/global-styles.scss";
+
 * {
   margin: 0rem;
   padding: 0rem;
@@ -33,5 +36,16 @@ h3,
 h4 {
   font-family: $title-font;
   color: #2f2f2f;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(2rem);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease-in-out;
 }
 </style>
