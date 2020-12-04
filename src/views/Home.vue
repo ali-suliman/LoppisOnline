@@ -21,8 +21,10 @@
       <img src="../assets/images/animation.svg" alt="" />
 
       <section class="actions">
-        <button class="cta animated">ladda ner appen</button>
-        <button class="link">kontakta oss</button>
+        <button class="cta animated" @click="toDownload">
+          ladda ner appen
+        </button>
+        <button class="link" @click="toContact">kontakta oss</button>
       </section>
     </section>
 
@@ -90,6 +92,12 @@ export default {
     closeNav: function() {
       console.log("exiting")
       this.showMenu = false
+    },
+    toDownload: function() {
+      this.$router.push("/download")
+    },
+    toContact: function() {
+      this.$router.push("/contact")
     },
   },
 }
@@ -302,6 +310,14 @@ export default {
           padding: 4rem;
           border-radius: 10px;
           @include stepAnim();
+
+          p {
+            color: #888;
+          }
+
+          &:hover > p {
+            color: #222;
+          }
 
           img {
             margin: 5rem 0rem;
