@@ -44,7 +44,7 @@ nav {
     border-bottom-left-radius: 2rem;
     transform: translateX(1rem);
     transition: all 0.4s ease;
-    box-shadow: 0px 0px 6px $main-color;
+    //box-shadow: 0px 0px 12px #0003;
 
     .menuBars {
       background: #f2f2f2;
