@@ -282,7 +282,7 @@ export default {
           width: initial;
           @include cta();
           &:hover {
-            transform: translateY(0.5rem);
+            transform: translateY(0.3rem);
           }
         }
 
